@@ -1,3 +1,7 @@
+<%= content_for(:title) do %>
+    Список постов:
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Posts</h1>
@@ -12,15 +16,7 @@
   </thead>
 
   <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Вы уверенны?' } %></td>
-      </tr>
-    <% end %>
+    <%= render @posts %>
   </tbody>
 </table>
 
