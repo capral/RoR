@@ -11,6 +11,11 @@
   </div>
 
     <div class="field">
+      <%= f.label :published, 'Опубликован' %><br>
+      <%= f.check_box :published %>
+    </div>
+
+    <div class="field">
       <%= f.label :category_ids, 'Категории' %><br>
       <%= f.collection_select :category_ids, Category.all, :id, :title, {}, {multiple: true} %>
     </div>

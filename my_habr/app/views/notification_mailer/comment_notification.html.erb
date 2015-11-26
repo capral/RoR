@@ -1,0 +1,4 @@
+<p>Привет, <%= @user.email %></p>
+<p> На Ваш пост " <%= link_to @post.title, @post %> "</p>
+<p> <%= truncate(@comment.body) %></p>
+<p> Все посты <%= link_to 'здесь', posts_url %> </p>
